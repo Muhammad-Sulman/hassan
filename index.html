@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/3b161c540c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header class="headerContainer">
+        <div class="mylogo" id="movingLogo">
+            Has<span class="logoclr">san</span>.
+        </div>
+        <nav>
+            <ul>
+                <li onclick="scrollToSection('Home')">Home</li>
+                <li onclick="scrollToSection('about')">About</li>
+                <li onclick="scrollToSection('Skills')">Skills</li>
+                <li onclick="scrollToSection('project')">Project</li>
+                <li onclick="scrollToSection('email')">Email</li>
+            </ul>
+            <div class="icon" id="icon">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN Banner Section -->
+    <div class="banner" id="Home">
+        <div class="content-box">
+            <div class="text-content">
+                <h1>Hi, I am <span id="typedText"></span></h1>
+                <h3>Welcome to My Portfolio</h3>
+                <p>
+                    A graphic designer is a professional within the graphic design and graphic arts industry who
+                    assembles together images, typography, or motion graphics to create a piece of design. A graphic
+                    designer creates the graphics primarily for published, printed, or electronic media, such as
+                    brochures and advertising.
+                </p>
+                <a id="btn1" href="img/bg.png" download>Download CV</a>
+                <a id="btn2" href="https://wa.me/+923231032003">Hire Me</a>
+            </div>
+            <div class="image-content">
+                <img src="img/bg.png" alt="Background Image">
+            </div>
+        </div>
+    </div>
+
+    <!-- about me section -->
+
+    <div class="about-me-container" id="about">
+        <div class="about-section">
+            <img src="img/1.jpg" alt="Profile Image" class="about-me-profile-image" onmouseover="zoomIn(this)"
+                onmouseout="zoomOut(this)">
+            <div class="about-me-content-section">
+                <h1 class="about-me-h1">About Me</h1>
+                <h2 class="about-me-h2">Hassan</h2>
+                <p class="about-me-p">
+                    Your content goes here. This could include your background, your work experience, your hobbies, etc.
+                    Add more paragraphs here to provide additional details about yourself.
+                </p>
+                <a id="about-me-btn" href="#" download>Download CV</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Skills section -->
+    <div class="skills-section" id="Skills">
+        <div class="skills-header">
+            <h1>Skills</h1>
+        </div>
+        <div class="skills-container">
+
+            <div class="skills-box">
+                <div class="skills-title">
+                    <div class="skills-img">
+                        <img src="img/adobe_photoshop.png" alt="" class="skills-icons">
+                    </div>
+                    <h3>Photoshop</h3>
+                </div>
+                <P class="skills-text"> Create gorgeous images, rich graphics, and incredible art. </P>
+            </div>
+
+
+            <div class="skills-box">
+                <div class="skills-title">
+                    <div class="skills-img">
+                        <img src="img/canva.png" alt="" class="skills-icons">
+                    </div>
+                    <h3>Canva</h3>
+                </div>
+                <P class="skills-text"> What will you design today? </P>
+            </div>
+
+
+            <div class="skills-box">
+                <div class="skills-title">
+                    <div class="skills-img">
+                        <img src="img/blender.png" alt="" class="skills-icons">
+                    </div>
+                    <h3>Blender</h3>
+                </div>
+                <P class="skills-text"> What will you design today? </P>
+            </div>
+
+            <div class="skills-box">
+                <div class="skills-title">
+                    <div class="skills-img">
+                        <img src="img/corel-draw.png" alt="" class="skills-icons">
+                    </div>
+                    <h3>C orel draw</h3>
+                </div>
+                <P class="skills-text"> What will you design today? </P>
+            </div>
+
+            <div class="skills-box">
+                <div class="skills-title">
+                    <div class="skills-img">
+                        <img src="img/autocad.png" alt="" class="skills-icons">
+                    </div>
+                    <h3>Autocad</h3>
+                </div>
+                <P class="skills-text"> What will you design today? </P>
+            </div>
+
+            <div class="skills-box">
+                <div class="skills-title">
+                    <div class="skills-img">
+                        <img src="img/max.jpeg" alt="" class="skills-icons">
+                    </div>
+                    <h3>Max</h3>
+                </div>
+                <P class="skills-text"> What will you design today? </P>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Section -->
+
+    <h1 class="main-heading" id="project"> Projects</h1>
+    <div class="cards-list" id="cardsList">
+        <!-- Cards will be dynamically added here using JavaScript -->
+    </div>
+
+    <!-- contact section  -->
+
+    <form action="https://formspree.io/f/xpzgvlpb" method="POST" class="my-form" id="email">
+        <div class="contact-container">
+            <h1>Get in touch!</h1>
+            <ul>
+
+                <li>
+                    <div class="grid grid-2">
+                        <input type="text" id="yourfirstname" name="name" placeholder="Name" required>
+                        <input type="text" id="yourlastname" placeholder="Surname" name="Father_name" required>
+                    </div>
+                </li>
+                <li>
+                    <div class="grid grid-2">
+                        <input type="email" id="youremail" name="Email" placeholder="Email" required>
+                        <input type="tel" id="yournumber" placeholder="Phone" name="Number">
+                    </div>
+                </li>
+                <li>
+                    <textarea id="yourmessage" placeholder="Message" name="Message"></textarea>
+                </li>
+
+                <li>
+                    <div class="grid grid-3">
+                        <div class="required-msg">REQUIRED FIELDS</div>
+                        <button class="btn-grid" type="submit">
+                            <span class="back">
+                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/email-icon.svg" alt="">
+                            </span>
+                            <span class="front">SUBMIT</span>
+                        </button>
+                        <button class="btn-grid" type="reset">
+                            <span class="back">
+                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/eraser-icon.svg" alt="">
+                            </span>
+                            <span class="front">RESET</span>
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </form>
+
+
+    <!-- footer section  -->
+
+
+    <footer class="footer">
+        <div class="container row">
+            <div class="footer-col">
+                <h4>Detail</h4>
+                <ul>
+                    <li onclick="scrollToSection('Home')">Home</li>
+                    <li onclick="scrollToSection('about')">About</li>
+                    <li onclick="scrollToSection('Skills')">Skills</li>
+                    <li onclick="scrollToSection('project')">Project</li>
+                    <li onclick="scrollToSection('email')">Email</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Get help in</h4>
+                <ul>
+                    <li><a href="#">Desiging</a></li>
+                    <li><a href="#">3D Modeling</a></li>
+                    <li><a href="#">Animation</a></li>
+                    <li><a href="#">Architecture</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Online</h4>
+                <ul>
+                    <li><a href="#" download="">Download CV</a></li>
+                    <li><a href="https://wa.me/+923231032003">Whatsapp</a></li>
+                    <li><a href="#">all version</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+   
+        <p class="cp-text">
+            © Copyright 2023 Made by Ali Murtaza. All rights reserved.
+        </p>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
