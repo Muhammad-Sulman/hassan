@@ -19,7 +19,7 @@ setInterval(moveLogo, 2000);
 
 
 // banner page 
-const textToType = "Hassan";
+const textToType = "Hassan as a Graphic designer";
 const spanElement = document.getElementById('typedText');
 let currentIndex = 0;
 
